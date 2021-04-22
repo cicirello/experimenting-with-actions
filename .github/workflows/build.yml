@@ -30,8 +30,15 @@ jobs:
       id: integration
       uses: ./
       with:
-        input-one: something
-        input-two: true
+        one-line: sub1/target/site/jacoco/jacoco.csv sub2/target/site/jacoco/jacoco.csv sub3/target/site/jacoco/jacoco.csv
+        multiline-pipe: |
+          sub1/target/site/jacoco/jacoco.csv
+          sub2/target/site/jacoco/jacoco.csv
+          sub3/target/site/jacoco/jacoco.csv
+        multiline-greater: >
+          sub1/target/site/jacoco/jacoco.csv
+          sub2/target/site/jacoco/jacoco.csv
+          sub3/target/site/jacoco/jacoco.csv
 
     - name: Output the outputs of the integration test of the action
       run: |
