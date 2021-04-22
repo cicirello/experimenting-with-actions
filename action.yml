@@ -6,11 +6,15 @@ branding: # Look at documentation for branding options/requirements. These are m
   icon: 'book-open'
   color: 'green'
 inputs:
-  input-one:  
+  one-line:  
     description: 'Description of input-one'
     required: false
     default: 'default value goes here'
-  input-two:
+  multiline-pipe:
+    description: 'Description of input-two'
+    required: false
+    default: 'default value goes here'
+  multiline-greater:
     description: 'Description of input-two'
     required: false
     default: 'default value goes here'
@@ -23,5 +27,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.input-one }}
-    - ${{ inputs.input-two }}
+    - ${{ inputs.one-line }}
+    - ${{ inputs.multiline-pipe }}
+    - ${{ inputs.multiline-greater }}
