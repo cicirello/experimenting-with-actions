@@ -4,10 +4,24 @@ import sys
 
 if __name__ == "__main__" :
     # Rename these variables to something meaningful
-    input1 = sys.argv[1]
-    input2 = sys.argv[2]
+    oneLine = sys.argv[1]
+    multiPipe = sys.argv[2]
+    multiGreater = sys.argv[2]
 
-
+    print("ONE LINE VERSION")
+    x = oneLine.split()
+    print(x)
+    
+    print("MULTILINE VERSION: |")
+    x = multiPipe.split()
+    print(x)
+    
+    print("MULTILINE VERSION: >")
+    x = multiGreater.split()
+    print(x)
+    
+    print("END OUTPUT")
+    
     # Fake example outputs
     output1 = "Hello"
     output2 = "World"
