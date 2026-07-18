@@ -14,4 +14,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api -X GET search/commits -f q='author:cicirello' --jq '.total_count'
+          gh api -X GET search/commits -f q='author:cicirello per_page:1' --jq '.total_count'
