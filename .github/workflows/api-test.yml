@@ -1,0 +1,17 @@
+name: trying out search api
+
+on:
+  workflow_dispatch:
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # Minimum required permission to check limits
+
+    steps:
+      - name: search
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh search commits author:cicirello
