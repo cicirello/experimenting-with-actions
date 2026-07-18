@@ -7,7 +7,7 @@ jobs:
   search:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # Minimum required permission to check limits
+      contents: read # Minimum required permission
 
     steps:
       - name: search
